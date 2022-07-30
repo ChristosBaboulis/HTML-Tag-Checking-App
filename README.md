@@ -4,7 +4,7 @@ USE:
 
 INFO:
       - It checks for errors like: Wrong tag format (e.g. <HEAD ), Wrong tag closing order (e.g. <HEAD> <BODY> </HEAD> </BODY>)
-      - It only works for simple HTML tags (e.g. not working on <a href="http://somegreatsite.com">, <BODY BGCOLOR="FFFFFF">) 
+      - It only works for simple HTML tags (e.g. not working on "<a href="...>", "<BODY BGCOLOR=...>") 
         open and close tags must have the same word inside them.
 
 HOW TO RUN:
