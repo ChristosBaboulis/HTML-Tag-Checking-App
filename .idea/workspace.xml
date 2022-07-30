@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ef993085-322c-4fa7-986c-3c37f79d9ca3" name="Changes" comment="First Commit - Added Interface Classes">
+    <list default="true" id="ef993085-322c-4fa7-986c-3c37f79d9ca3" name="Changes" comment="Final Touch">
+      <change afterPath="$PROJECT_DIR$/src/TagMatching.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_html_file.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,6 +30,16 @@
     "RunOnceActivity.ShowReadmeOnStart": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="TagMatching" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="TagMatching" />
+      <module name="HTML Tag Checking App" />
+      <option name="PROGRAM_PARAMETERS" value="test_html_file.html" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -44,7 +56,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659201186555</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added First Implementations">
+      <created>1659202306493</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1659202306493</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -60,6 +79,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First Commit - Added Interface Classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="First Commit - Added Interface Classes" />
+    <MESSAGE value="Added First Implementations" />
+    <MESSAGE value="Final Touch" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final Touch" />
   </component>
 </project>
