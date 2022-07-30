@@ -31,21 +31,11 @@ public class TagMatching {
 			
 			while(line != null) {
 				c+=1;
-
-				System.out.println("LINE: "+c+ " TEXT:"+line);
-
 				index = line.indexOf("<");
-
-
-				System.out.println("< LINE INDEX: "+index);
-
 
 				while(index >= 0)
 				{
 					index2 = line.indexOf(">", index + 1);
-
-					System.out.println("> INDEX2: "+index2);
-
 					//if: checks whether there is an open tag and shows related message (e.g. <head)
 					if(index2 < 0) {
 						System.out.print("File has errors! \nTag on line "+c+" is open.\n\n");
@@ -54,11 +44,6 @@ public class TagMatching {
 					//adds in the stack the opening tag (e.g. from the tag <head> -> "head" will be added to the stack)
 					if( !( line.substring(index + 1).startsWith("/") ) ){
 						Stack.push(line.substring(index + 1, index2));
-
-
-						System.out.println("GOT IN STACK: "+line.substring(index + 1, index2));
-
-
 					}
 					// closing tags (e.g. </head>) are not added to the stack.
 					// We compare them inside the else below with the last tag added inside the stack to see if the tag closes
@@ -86,7 +71,6 @@ public class TagMatching {
 					//if there is 	-> index is >= 0 so While clause goes again
 					//if not 		-> index is = -1 so we leave this While clause
 					index = line.indexOf("<", index2 + 1);
-					System.out.println("INDEX1: "+index);
 				}
 				//If a single tag is not matched program stops, we have an error we do not check for more
 				if(flag == true){
@@ -94,13 +78,6 @@ public class TagMatching {
 				}
 				//change line
 				line = br.readLine();
-
-
-
-				System.out.println("\n");
-
-
-
 			}
 			if(Stack.isEmpty() && flag == false){
 				System.out.println("All tags are matched. Program is correct!");
