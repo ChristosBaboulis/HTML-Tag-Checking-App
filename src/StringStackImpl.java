@@ -23,14 +23,10 @@ public class StringStackImpl implements StringStack{
 	
 	public void push(String item) {
 		StackNode node = new StackNode(item);
-		if(isEmpty()) {
-			firstNode = node;
-		}
-		else {
+		if (!isEmpty()) {
 			node.next = firstNode;
-			firstNode = node;
 		}
-		
+		firstNode = node;
 	}
 	
 	
@@ -54,9 +50,8 @@ public class StringStackImpl implements StringStack{
 		if(isEmpty()) {
 			throw new NoSuchElementException(name);
 		}
-		
-		String returnedNode = firstNode.data;
-		return returnedNode;
+
+		return firstNode.data;
 	}
 	
 	

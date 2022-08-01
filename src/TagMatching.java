@@ -6,11 +6,11 @@ public class TagMatching {
 
 		String path= null;
 		StringStackImpl Stack = new StringStackImpl();
-		File f = null;
-		FileReader fr = null;
+		File f;
+		FileReader fr;
 		BufferedReader br = null;
-		String line = null;
-		boolean flag = false;
+		String line;
+		boolean foundError = false;
 
 		if (0 < args.length) {
 			   path = args[0];
@@ -25,61 +25,61 @@ public class TagMatching {
 			br = new BufferedReader(fr);
 			line = br.readLine();
 				
-			int index = -1;
-			int index2 = -1;
-			int c = 0;
+			int openTag;
+			int closeTag;
+			int lineCounter = 0;
 			
 			while(line != null) {
-				c+=1;
-				index = line.indexOf("<");
+				lineCounter+=1;
+				openTag = line.indexOf("<");
 
-				while(index >= 0)
+				while(openTag >= 0)
 				{
-					index2 = line.indexOf(">", index + 1);
+					closeTag = line.indexOf(">", openTag + 1);
 					//if: checks whether there is an open tag and shows related message (e.g. <head)
-					if(index2 < 0) {
-						System.out.print("File has errors! \nTag on line "+c+" is open.\n\n");
+					if(closeTag < 0) {
+						System.out.print("File has errors! \nTag on line "+lineCounter+" is open.\n\n");
 						break;
 					}
 					//adds in the stack the opening tag (e.g. from the tag <head> -> "head" will be added to the stack)
-					if( !( line.substring(index + 1).startsWith("/") ) ){
-						Stack.push(line.substring(index + 1, index2));
+					if( !( line.substring(openTag + 1).startsWith("/") ) ){
+						Stack.push(line.substring(openTag + 1, closeTag));
 					}
 					// closing tags (e.g. </head>) are not added to the stack.
 					// We compare them inside the else below with the last tag added inside the stack to see if the tag closes
 					// If comparison is good and they match, we pop it out of the stack to check the next one
 					else
 					{
-						int index3 = line.indexOf(">", index + 1);
-						String s1 = line.substring(index + 2,index3);
+						int index3 = line.indexOf(">", openTag + 1);
+						String s1 = line.substring(openTag + 2,index3);
 						//Compare here
 						if(Stack.size() > 0) {
 							if (s1.equals(Stack.peek())) {
 								Stack.pop();
 							} else {
-								System.out.println("Tags are not Matched. Program not Correct! Line: " + c);
-								flag = true;
+								System.out.println("Tags are not Matched. Program not Correct! Line: " + lineCounter);
+								foundError = true;
 								break;
 							}
 						}else{
-							System.out.println("Tags are not Matched. Program not Correct! Line: " + c);
-							flag = true;
+							System.out.println("Tags are not Matched. Program not Correct! Line: " + lineCounter);
+							foundError = true;
 							break;
 						}
 					}
 					//Check whether there is another tag in current line
-					//if there is 	-> index is >= 0 so While clause goes again
-					//if not 		-> index is = -1 so we leave this While clause
-					index = line.indexOf("<", index2 + 1);
+					//if there is 	-> openTag is >= 0 so While clause goes again
+					//if not 		-> openTag is = -1 so we leave this While clause
+					openTag = line.indexOf("<", closeTag + 1);
 				}
 				//If a single tag is not matched program stops, we have an error we do not check for more
-				if(flag == true){
+				if(foundError){
 					break;
 				}
 				//change line
 				line = br.readLine();
 			}
-			if(Stack.isEmpty() && flag == false){
+			if(Stack.isEmpty() && !foundError){
 				System.out.println("All tags are matched. Program is correct!");
 			}
 		}
