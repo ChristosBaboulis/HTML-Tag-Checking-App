@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ef993085-322c-4fa7-986c-3c37f79d9ca3" name="Changes" comment="Final Touch">
+    <list default="true" id="ef993085-322c-4fa7-986c-3c37f79d9ca3" name="Changes" comment="fixed warnings, var names">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/IntQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IntQueue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/IntQueueImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IntQueueImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StringStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StringStack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StringStackImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StringStackImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TagMatching.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TagMatching.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IntQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/example/interfaces/IntQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IntQueueImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/example/structures/IntQueueImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/QueueNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/example/objects/QueueNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StackNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/example/objects/StackNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StringStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/example/interfaces/StringStack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StringStackImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/example/structures/StringStackImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TagMatching.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/example/runnables/TagMatching.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,17 +29,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
-    <configuration name="TagMatching" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="TagMatching" />
+    <configuration name="Add html file" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.example.runnables.TagMatching" />
       <module name="HTML Tag Checking App" />
       <option name="PROGRAM_PARAMETERS" value="test_html_file.html" />
       <method v="2">
@@ -81,7 +85,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659208581403</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fixed warnings, var names">
+      <created>1659352277589</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1659352277589</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -99,6 +110,7 @@
     <MESSAGE value="First Commit - Added Interface Classes" />
     <MESSAGE value="Added First Implementations" />
     <MESSAGE value="Final Touch" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final Touch" />
+    <MESSAGE value="fixed warnings, var names" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed warnings, var names" />
   </component>
 </project>
